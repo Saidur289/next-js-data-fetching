@@ -15,7 +15,7 @@ export default function MealInput() {
     }, [search])
   return (
     <div className='text-center py-5'>
-        <input type="text" placeholder='Search By Meal' className='text-black py-3 bg-gray-200 w-1/2' value={search} onChange={(e) => setSearch(e.target.value)} />
+        <input type="text" placeholder='Search By Meal' className='text-black px-5 py-3 bg-gray-200 w-1/2' value={search} onChange={(e) => setSearch(e.target.value)} />
     </div>
   )
 }
