@@ -1,3 +1,12 @@
+export async function generateMetadata ({params}){
+    const id = (await params).id
+    const singlePost = await getSinglePost(id)
+    return {
+        title: singlePost?.title, 
+        description: singlePost?.body
+    }
+}
+
 export  const getSinglePost = async(id) => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
     const data = await res.json()

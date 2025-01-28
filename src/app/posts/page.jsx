@@ -6,7 +6,10 @@ export const getPosts = async() => {
     const data = await res.json()
     return data
 }
-
+export const metadata = {
+  title: 'All Posts',
+  description: 'Loading posts using server component'
+}
 export default async function Posts() {
     const posts = await getPosts()
 
