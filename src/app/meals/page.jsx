@@ -17,16 +17,15 @@ export default  async function MealsPage({searchParams}) {
         }
     }
  
-  const meals = await fetchMeals()
+  const meals = await fetchMeals() || []
   return (
     <div>
-     <h1>Total Meals : {meals.length}</h1>
      <MealInput></MealInput>
      <div className='grid grid-cols-4 gap-4'>
         {
-            meals.map((meal) => <div key={meal.id}>
+            meals.map((meal, index) => <div key={index}>
                 <p className='text-2xl font-bold'>{meal?.strMeal}</p>
-                <p>{meal.strInstructions}</p>
+                <p>{meal.strInstructions.substring(0,100)}..</p>
             </div>)
         }
      </div>

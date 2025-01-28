@@ -8,6 +8,7 @@ export default function () {
             <ul className="flex justify-between w-1/2">
             <li><Link href={'/'}>HOME</Link></li>
             <li><Link href={'/posts'}>POST</Link></li>
+            <li><Link href={'/meals'}>MEALS</Link></li>
             </ul>
 
         </nav>
