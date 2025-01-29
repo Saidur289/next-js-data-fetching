@@ -1,10 +1,10 @@
 import React from 'react'
-
+export const dynamic = 'force-dynamic'
 export default async function ProductPage() {
-    const res = await fetch('http://localhost:3000/api/items', {cache: 'force-cache'})
+    const res = await fetch('http://localhost:3000/api/items')
     const {data} = await res.json()
     console.log(data);
-
+    // , {cache: 'force-cache'}  use for when not load data
   return (
     <div className='flex justify-center'>
        

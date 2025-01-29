@@ -1,7 +1,9 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 export default function ProductAddForm() {
+    const route = useRouter()
     const handleSubmit = async(e) => {
         e.preventDefault()
         const form = e.target 
@@ -18,6 +20,7 @@ export default function ProductAddForm() {
         console.log(data);
         alert('product added')
         form.reset()
+        route.push('/products')
     }
   return (
     <div>
