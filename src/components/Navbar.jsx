@@ -9,6 +9,8 @@ export default function () {
             <li><Link href={'/'}>HOME</Link></li>
             <li><Link href={'/posts'}>POST</Link></li>
             <li><Link href={'/meals'}>MEALS</Link></li>
+            <li><Link href={'/products'}>Products</Link></li>
+            <li><Link href={'/products/add'}>Add Products</Link></li>
             </ul>
 
         </nav>
