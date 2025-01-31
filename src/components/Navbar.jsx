@@ -15,6 +15,7 @@ export default function () {
               <li><Link href={'/meals'}>MEALS</Link></li>
               <li><Link href={'/products'}>Products</Link></li>
               <li><Link href={'/products/add'}>Add Products</Link></li>
+              <li><Link href={'/register'}>Register</Link></li>
               </ul>
   
           </nav>

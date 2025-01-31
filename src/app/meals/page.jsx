@@ -40,6 +40,7 @@ export default async function MealsPage({ searchParams }) {
             <p className="text-2xl font-bold py-3">{meal?.strMeal}</p>
             <p className="mb-3">{meal.strInstructions.substring(0, 100)}..</p>
            <Link href={`/meals/${meal?.idMeal}`}> <button className="bg-green-600 text-white px-5 py-3 rounded-md">Explore More</button></Link>
+           
           </div>
         ))}
       </div>
