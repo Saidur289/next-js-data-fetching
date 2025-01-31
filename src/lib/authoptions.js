@@ -45,7 +45,7 @@ export const authOptions = {
       async signIn({ user, account, profile, email, credentials }) {
         if(account){
         try{
-          console.log('sign with provider' , { user, account, profile, email, credentials });
+          // console.log('sign with provider' , { user, account, profile, email, credentials });
           const {providerAccountId, provider} = account
           const {email: user_email, image, name} = user
           const payload = {providerAccountId, provider, user_email, image, name}
