@@ -1,11 +1,11 @@
 'use server'
 
-import dbConnect from "@/lib/dbConnect"
+import dbConnect, { collectionNames } from "@/lib/dbConnect"
 import { revalidatePath } from "next/cache"
 
 export const postSingleProducts = async (postedData) => {
     try{
-        const result = await dbConnect('schedule').insertOne(postedData)
+        const result = await dbConnect(collectionNames.SCHEDULE).insertOne(postedData)
         revalidatePath('/products')
         return result
     }

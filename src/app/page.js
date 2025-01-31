@@ -1,8 +1,10 @@
 import LoginButton from "@/components/LoginButton";
+import LogOutButton from "@/components/LogOutButton";
 import UserInfo from "@/components/UserInfo";
+import { authOptions } from "@/lib/authoptions";
 import { getServerSession } from "next-auth";
 import Image from "next/image";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+
 
 export default async function Home() {
   const session = await getServerSession(authOptions)
@@ -53,8 +55,8 @@ export default async function Home() {
           >
             Read our docs
           </a>
+          {session?.user ? <LogOutButton></LogOutButton> :  <LoginButton></LoginButton>}
           
-          <LoginButton></LoginButton>
           <br />
           <p className="text-xl font-bold">From Client Components</p>
           <br />

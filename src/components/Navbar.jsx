@@ -1,9 +1,12 @@
 'use client'
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
+
 export default function () {
+
   const pathname = usePathname()
   if(!pathname.includes('/dashboard')){
     return (
@@ -16,9 +19,11 @@ export default function () {
               <li><Link href={'/products'}>Products</Link></li>
               <li><Link href={'/products/add'}>Add Products</Link></li>
               <li><Link href={'/register'}>Register</Link></li>
+               
               </ul>
   
           </nav>
+          
       </div>
     )
   }
