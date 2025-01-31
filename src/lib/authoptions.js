@@ -48,7 +48,7 @@ export const authOptions = {
           // console.log('sign with provider' , { user, account, profile, email, credentials });
           const {providerAccountId, provider} = account
           const {email: user_email, image, name} = user
-          const payload = {providerAccountId, provider, user_email, image, name}
+          const payload = {role: 'user', providerAccountId, provider, user_email, image, name}
           const usersCollection = dbConnect(collectionNames.TEST_USER)
           const isExistsUser = await usersCollection.findOne({providerAccountId})
           if(!isExistsUser){
